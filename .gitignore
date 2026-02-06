@@ -1,0 +1,32 @@
+# --- Python General ---
+# Archivos compilados (byte-code)
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Distribución y empaquetado
+dist/
+build/
+*.egg-info/
+
+# --- Entornos Virtuales (Virtual Envs) ---
+# Es buena práctica ignorar la carpeta de tu entorno virtual
+venv/
+env/
+.venv/
+.env
+
+# --- PyCharm (JetBrains) ---
+# Archivos de configuración del IDE específicos de tu máquina
+.idea/
+
+# --- Sistemas Operativos ---
+.DS_Store
+Thumbs.db
+
+# --- Logs y Bases de datos locales ---
+*.log
+*.sqlite3
+
+# --- Jupyter Notebooks (si los llegas a usar) ---
+.ipynb_checkpoints
