@@ -30,6 +30,3 @@ Thumbs.db
 
 # --- Jupyter Notebooks (si los llegas a usar) ---
 .ipynb_checkpoints
-
-*.docx
-*.pdf
