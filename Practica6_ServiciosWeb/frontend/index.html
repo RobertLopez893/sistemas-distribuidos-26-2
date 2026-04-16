@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plataforma MLOps Distribuida</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-light">
+
+<div class="container mt-5">
+    <header class="mb-4 text-center">
+        <h1 class="display-5 fw-bold text-primary">Plataforma MLOps Distribuida</h1>
+        <p class="text-muted">Orquestación de Machine Learning orientada a Servicios</p>
+    </header>
+
+    <div class="row">
+        <div class="col-md-4">
+            <div class="card shadow-sm border-0">
+                <div class="card-header bg-dark text-white">
+                    <h5 class="mb-0">Configuración del Job</h5>
+                </div>
+                <div class="card-body">
+                    <form id="mlops-form">
+                        <div class="mb-3">
+                            <label class="form-label fw-bold">Dataset de Entrenamiento</label>
+                            <select class="form-select" id="dataset-select" required>
+                                <option value="sintetico_10k">Sintético Base (10,000 muestras)</option>
+                                <option value="sintetico_100k">Alta Dimensionalidad (100,000 muestras)</option>
+                            </select>
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label fw-bold">Modelo Clasificador</label>
+                            <select class="form-select" id="model-select" required>
+                                <option value="SVM">Máquina de Soporte Vectorial (SVM)</option>
+                                <option value="Random Forest">Random Forest</option>
+                                <option value="MLP">Red Neuronal (MLP)</option>
+                                <option value="Regresión Logística">Regresión Logística</option>
+                                <option value="Árbol de Decisión">Árbol de Decisión</option>
+                                <option value="Naive Bayes">Naive Bayes</option>
+                            </select>
+                        </div>
+
+                        <div class="d-grid gap-2 mt-4">
+                            <button type="submit" class="btn btn-primary btn-lg" id="btn-entrenar">
+                                Desplegar Entrenamiento
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <div class="alert alert-info mt-3 d-none" id="status-console" role="alert">
+                <strong>Estado:</strong> <span id="status-text">Esperando instrucciones...</span>
+            </div>
+        </div>
+
+        <div class="col-md-8">
+            <div class="card shadow-sm border-0">
+                <div class="card-header bg-success text-white">
+                    <h5 class="mb-0">🏆 Leaderboard Global</h5>
+                </div>
+                <div class="card-body p-0">
+                    <table class="table table-hover table-striped mb-0 text-center">
+                        <thead class="table-light">
+                            <tr>
+                                <th>Rango</th>
+                                <th>Modelo</th>
+                                <th>Precisión (Accuracy)</th>
+                                <th>Tiempo de Cómputo</th>
+                            </tr>
+                        </thead>
+                        <tbody id="leaderboard-body">
+                            <tr>
+                                <td colspan="4" class="text-muted py-4">No hay resultados registrados en la red.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>

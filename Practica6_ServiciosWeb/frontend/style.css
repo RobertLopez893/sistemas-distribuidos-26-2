@@ -1,0 +1,19 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Efecto suave para cuando las filas de la tabla se actualicen */
+tbody tr {
+    transition: background-color 0.3s ease;
+}
+
+/* Sombreado elegante para las tarjetas */
+.card {
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.card-header {
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
